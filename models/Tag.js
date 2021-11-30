@@ -13,11 +13,9 @@ Tag.init(
       primaryKey: true,
       autoIncrement: true
     },
-    {
-      tag_name: {
-        type: DataTypes.INTEGER
-      }
-    }
+    tag_name: {
+      type: DataTypes.INTEGER
+    },
   },
   {
     sequelize,
