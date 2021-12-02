@@ -11,10 +11,11 @@ router.get('/', async (req, res) => {
       Category,
       {
         model: Tag,
+        as: 'prices',
         through: ProductTag,
       },
     ],
-  })
+  }).catch(err => console.log(err)) 
   return res.json(productData);
 });
 
@@ -30,10 +31,11 @@ router.get('/:id', async (req, res) => {
       Category,
       {
         model: Tag,
+        as: 'prices',
         through: ProductTag
       }
     ],
-  });
+  }).catch(err => console.log(err));
 
 // create new product
 router.post('/', (req, res) => {
