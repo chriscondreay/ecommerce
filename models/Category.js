@@ -14,9 +14,9 @@ Category.init(
       autoIncrement: true
     },
     category_name: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      allowNull:false
     },
-  },
   },
   {
     sequelize,
@@ -24,7 +24,7 @@ Category.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'category',
-  }
+  },
 );
 
 module.exports = Category;
